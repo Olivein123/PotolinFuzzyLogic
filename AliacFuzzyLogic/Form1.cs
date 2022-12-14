@@ -26,60 +26,58 @@ namespace AliacFuzzyLogic
         public void setMembers()
         {
             hp = new MembershipFunctionCollection();
-            hp.Add(new MembershipFunction("VERY LOW",0.0,0.0,5.0,15.0));
+            hp.Add(new MembershipFunction("VERYLOW",0.0,0.0,5.0,15.0));
             hp.Add(new MembershipFunction("LOW", 10.0, 20.0, 20.0, 25.0));
             hp.Add(new MembershipFunction("HALF", 25.0, 50.0, 50.0, 50.0));
             hp.Add(new MembershipFunction("HIGH", 50.0, 75.0, 75.0, 80.0));
             hp.Add(new MembershipFunction("FULL", 75.0, 100.0, 100.0, 100.0));
-            myHp = new LinguisticVariable("BOSS HEALTH", hp);
+            myHp = new LinguisticVariable("HEALTH", hp);
 
             numPlayers = new MembershipFunctionCollection();
             numPlayers.Add(new MembershipFunction("NONE", 0.0, 0.0, 0.0, 0.0));
-            numPlayers.Add(new MembershipFunction("SMALL GROUP", 1.0, 2.0, 2.0, 2.0));
+            numPlayers.Add(new MembershipFunction("SMALLGROUP", 1.0, 2.0, 2.0, 2.0));
             numPlayers.Add(new MembershipFunction("GROUP", 2.0, 3.0, 3.0, 4.0));
             numPlayers.Add(new MembershipFunction("PLATOON", 4.0, 5.0, 5.0, 6.0));
             numPlayers.Add(new MembershipFunction("BATTALION", 6.0, 7.0, 7.0, 8.0));
             numPlayers.Add(new MembershipFunction("GUILD", 8.0, 9.0, 9.0, 10.0));
-            myNumPlayers = new LinguisticVariable("ATTACKING PLAYERS", numPlayers);
+            myNumPlayers = new LinguisticVariable("ATTACKINGPLAYERS", numPlayers);
 
             bossAction = new MembershipFunctionCollection();
-            bossAction.Add(new MembershipFunction("DO NOTHING",0.0,0.0,2.0,4.0));
+            bossAction.Add(new MembershipFunction("DONOTHING",0.0,0.0,2.0,4.0));
             bossAction.Add(new MembershipFunction("HEAL", 2.0, 4.0, 4.0, 6.0));
             bossAction.Add(new MembershipFunction("ATTACK", 4.0, 6.0, 6.0, 8.0));
             bossAction.Add(new MembershipFunction("INVULNERABILITY", 6.0, 8.0, 8.0, 10.0));
             bossAction.Add(new MembershipFunction("ENRAGE", 8.0, 10.0, 10.0, 10.0));
-            myBossAction = new LinguisticVariable("BOSS ACTION", bossAction);
-
-            
-        
+            myBossAction = new LinguisticVariable("ACTION", bossAction);
         }
 
         public void setRules()
         {
           myrules = new FuzzyRuleCollection();
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS VERY LOW) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS HEAL"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS VERY LOW) AND (ATTACKING PLAYERS IS SMALL GROUP) THEN BOSS ACTION IS INVULNERABILITY"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS VERY LOW) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS ENRAGE"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS LOW) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS HEAL"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS LOW) AND (ATTACKING PLAYERS IS SMALL GROUP) THEN BOSS ACTION IS ATTACK"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS LOW) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS INVULNERABILITY"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HALF) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS HEAL"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HALF) AND (ATTACKING PLAYERS IS PLATOON) THEN BOSS ACTION IS ATTACK"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HALF) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS INVULNERABILITY"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HIGH) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS HEAL"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HIGH) AND (ATTACKING PLAYERS IS BATTALION) THEN BOSS ACTION IS ATTACK"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HIGH) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS INVULNERABILITY"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS FULL) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS DO NOTHING"));
-          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS FULL) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS ATTACK"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS VERYLOW) AND (ATTACKINGPLAYERS IS NONE) THEN ACTION IS HEAL"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS VERYLOW) AND (ATTACKINGPLAYERS IS SMALLGROUP) THEN ACTION IS INVULNERABILITY"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS VERYLOW) AND (ATTACKINGPLAYERS IS GUILD) THEN ACTION IS ENRAGE"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS LOW) AND (ATTACKINGPLAYERS IS NONE) THEN ACTION IS HEAL"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS LOW) AND (ATTACKINGPLAYERS IS SMALLGROUP) THEN ACTION IS ATTACK"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS LOW) AND (ATTACKINGPLAYERS IS GUILD) THEN ACTION IS INVULNERABILITY"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS HALF) AND (ATTACKINGPLAYERS IS NONE) THEN ACTION IS HEAL"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS HALF) AND (ATTACKINGPLAYERS IS PLATOON) THEN ACTION IS ATTACK"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS HALF) AND (ATTACKINGPLAYERS IS GUILD) THEN ACTION IS INVULNERABILITY"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS HIGH) AND (ATTACKINGPLAYERS IS NONE) THEN ACTION IS HEAL"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS HIGH) AND (ATTACKINGPLAYERS IS BATTALION) THEN ACTION IS ATTACK"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS HIGH) AND (ATTACKINGPLAYERS IS GUILD) THEN ACTION IS INVULNERABILITY"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS FULL) AND (ATTACKINGPLAYERS IS NONE) THEN ACTION IS DONOTHING"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS FULL) AND (ATTACKINGPLAYERS IS BATTALION) THEN ACTION IS ENRAGE"));
+          myrules.Add(new FuzzyRule("IF (HEALTH IS FULL) AND (ATTACKINGPLAYERS IS GUILD) THEN ACTION IS ATTACK"));
 
         }
 
         public void setFuzzyEngine()
         {
             fe = new FuzzyEngine();
-            fe.LinguisticVariableCollection.Add(myspeed);
-            fe.LinguisticVariableCollection.Add(myangle);
-            fe.LinguisticVariableCollection.Add(mythrottle);
+            fe.LinguisticVariableCollection.Add(myHp);
+            fe.LinguisticVariableCollection.Add(myNumPlayers);
+            fe.LinguisticVariableCollection.Add(myBossAction);
             fe.FuzzyRuleCollection = myrules;
         }
 
@@ -102,31 +100,31 @@ namespace AliacFuzzyLogic
 
         private void button1_Click(object sender, EventArgs e)
         {
-            myspeed.InputValue=(Convert.ToDouble(textBox1.Text));
-            myspeed.Fuzzify("OK");
+            myHp.InputValue=(Convert.ToDouble(textBox1.Text));
+            myHp.Fuzzify("LOW");
             
             
             
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            myangle.InputValue = (Convert.ToDouble(textBox2.Text));
-            myangle.Fuzzify("LEVEL");
+            myNumPlayers.InputValue = (Convert.ToDouble(textBox2.Text));
+            myNumPlayers.Fuzzify("SMALLGROUP");
             
         }
 
         public void fuziffyvalues()
         {
-            myspeed.InputValue = (Convert.ToDouble(textBox1.Text));
-            myspeed.Fuzzify("LOW");
-            myangle.InputValue = (Convert.ToDouble(textBox2.Text));
-            myangle.Fuzzify("DOWN");
+            myHp.InputValue = (Convert.ToDouble(textBox1.Text));
+            myHp.Fuzzify("VERYLOW");
+            myNumPlayers.InputValue = (Convert.ToDouble(textBox2.Text));
+            myNumPlayers.Fuzzify("NONE");
         
         }
         public void defuzzy()
         {
             setFuzzyEngine();
-            fe.Consequent = "THROTTLE";
+            fe.Consequent = "ACTION";
             textBox3.Text = "" + fe.Defuzzify();
         }
 
@@ -140,10 +138,15 @@ namespace AliacFuzzyLogic
             textBox1.Text = "" + newspeed;
         }
 
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             setFuzzyEngine();
-            fe.Consequent = "THROTTLE";
+            fe.Consequent = "ACTION";
             textBox3.Text = "" + fe.Defuzzify();
             
         }
