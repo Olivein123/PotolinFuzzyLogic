@@ -12,8 +12,8 @@ namespace AliacFuzzyLogic
     public partial class Form1 : Form
     {
         FuzzyEngine fe;
-        MembershipFunctionCollection speed,angle,throttle;
-        LinguisticVariable myspeed, myangle, mythrottle;
+        MembershipFunctionCollection hp,numPlayers,bossAction;
+        LinguisticVariable myHp, myNumPlayers, myBossAction;
         FuzzyRuleCollection myrules;
         
 
@@ -25,27 +25,30 @@ namespace AliacFuzzyLogic
     
         public void setMembers()
         {
+            hp = new MembershipFunctionCollection();
+            hp.Add(new MembershipFunction("VERY LOW",0.0,0.0,5.0,15.0));
+            hp.Add(new MembershipFunction("LOW", 10.0, 20.0, 20.0, 25.0));
+            hp.Add(new MembershipFunction("HALF", 25.0, 50.0, 50.0, 50.0));
+            hp.Add(new MembershipFunction("HIGH", 50.0, 75.0, 75.0, 80.0));
+            hp.Add(new MembershipFunction("FULL", 75.0, 100.0, 100.0, 100.0));
+            myHp = new LinguisticVariable("BOSS HEALTH", hp);
 
-            speed = new MembershipFunctionCollection();
-            speed.Add(new MembershipFunction("LOW",0.0,0.0,45.0,50.0));
-            speed.Add(new MembershipFunction("OK", 45.0, 50.0, 50.0, 55.0));
-            speed.Add(new MembershipFunction("HIGH", 50.0, 55.0, 100.0, 100.0));
-            myspeed = new LinguisticVariable("SPEED", speed);
+            numPlayers = new MembershipFunctionCollection();
+            numPlayers.Add(new MembershipFunction("NONE", 0.0, 0.0, 0.0, 0.0));
+            numPlayers.Add(new MembershipFunction("SMALL GROUP", 1.0, 2.0, 2.0, 2.0));
+            numPlayers.Add(new MembershipFunction("GROUP", 2.0, 3.0, 3.0, 4.0));
+            numPlayers.Add(new MembershipFunction("PLATOON", 4.0, 5.0, 5.0, 6.0));
+            numPlayers.Add(new MembershipFunction("BATTALION", 6.0, 7.0, 7.0, 8.0));
+            numPlayers.Add(new MembershipFunction("GUILD", 8.0, 9.0, 9.0, 10.0));
+            myNumPlayers = new LinguisticVariable("ATTACKING PLAYERS", numPlayers);
 
-
-            angle = new MembershipFunctionCollection();
-            angle.Add(new MembershipFunction("DOWN", -10.0, -10.0, -5.0, 0.0));
-            angle.Add(new MembershipFunction("LEVEL", -5.0, 1.0, 1.0, 5.0));
-            angle.Add(new MembershipFunction("UP", 0.0, 5.0, 10.0, 10.0));
-            myangle = new LinguisticVariable("ANGLE", angle);
-
-            throttle = new MembershipFunctionCollection();
-            throttle.Add(new MembershipFunction("LOW",0.0,0.0,2.0,4.0));
-            throttle.Add(new MembershipFunction("LM", 2.0, 4.0, 4.0, 6.0));
-            throttle.Add(new MembershipFunction("MED", 4.0, 6.0, 6.0, 8.0));
-            throttle.Add(new MembershipFunction("HM", 6.0, 8.0, 8.0, 10.0));
-            throttle.Add(new MembershipFunction("HIGH", 8.0, 10.0, 10.0, 10.0));
-            mythrottle = new LinguisticVariable("THROTTLE", throttle);
+            bossAction = new MembershipFunctionCollection();
+            bossAction.Add(new MembershipFunction("DO NOTHING",0.0,0.0,2.0,4.0));
+            bossAction.Add(new MembershipFunction("HEAL", 2.0, 4.0, 4.0, 6.0));
+            bossAction.Add(new MembershipFunction("ATTACK", 4.0, 6.0, 6.0, 8.0));
+            bossAction.Add(new MembershipFunction("INVULNERABILITY", 6.0, 8.0, 8.0, 10.0));
+            bossAction.Add(new MembershipFunction("ENRAGE", 8.0, 10.0, 10.0, 10.0));
+            myBossAction = new LinguisticVariable("BOSS ACTION", bossAction);
 
             
         
@@ -54,15 +57,21 @@ namespace AliacFuzzyLogic
         public void setRules()
         {
           myrules = new FuzzyRuleCollection();
-          myrules.Add(new FuzzyRule("IF (SPEED IS HIGH) AND (ANGLE IS UP) THEN THROTTLE IS LM"));
-          myrules.Add(new FuzzyRule("IF (SPEED IS HIGH) AND (ANGLE IS LEVEL) THEN THROTTLE IS LM"));
-          myrules.Add(new FuzzyRule("IF (SPEED IS HIGH) AND (ANGLE IS DOWN) THEN THROTTLE IS LOW"));
-          myrules.Add(new FuzzyRule("IF (SPEED IS OK) AND (ANGLE IS UP) THEN THROTTLE IS HM"));
-          myrules.Add(new FuzzyRule("IF (SPEED IS OK) AND (ANGLE IS LEVEL) THEN THROTTLE IS MED"));
-          myrules.Add(new FuzzyRule("IF (SPEED IS OK) AND (ANGLE IS DOWN) THEN THROTTLE IS LM"));
-          myrules.Add(new FuzzyRule("IF (SPEED IS LOW) AND (ANGLE IS UP) THEN THROTTLE IS HIGH"));
-          myrules.Add(new FuzzyRule("IF (SPEED IS OK) AND (ANGLE IS LEVEL) THEN THROTTLE IS HM"));
-          myrules.Add(new FuzzyRule("IF (SPEED IS OK) AND (ANGLE IS DOWN) THEN THROTTLE IS HM"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS VERY LOW) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS HEAL"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS VERY LOW) AND (ATTACKING PLAYERS IS SMALL GROUP) THEN BOSS ACTION IS INVULNERABILITY"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS VERY LOW) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS ENRAGE"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS LOW) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS HEAL"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS LOW) AND (ATTACKING PLAYERS IS SMALL GROUP) THEN BOSS ACTION IS ATTACK"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS LOW) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS INVULNERABILITY"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HALF) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS HEAL"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HALF) AND (ATTACKING PLAYERS IS PLATOON) THEN BOSS ACTION IS ATTACK"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HALF) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS INVULNERABILITY"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HIGH) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS HEAL"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HIGH) AND (ATTACKING PLAYERS IS BATTALION) THEN BOSS ACTION IS ATTACK"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS HIGH) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS INVULNERABILITY"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS FULL) AND (ATTACKING PLAYERS IS NONE) THEN BOSS ACTION IS DO NOTHING"));
+          myrules.Add(new FuzzyRule("IF (BOSS HEALTH IS FULL) AND (ATTACKING PLAYERS IS GUILD) THEN BOSS ACTION IS ATTACK"));
+
         }
 
         public void setFuzzyEngine()
