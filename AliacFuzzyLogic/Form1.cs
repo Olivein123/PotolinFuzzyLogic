@@ -69,7 +69,6 @@ namespace AliacFuzzyLogic
           myrules.Add(new FuzzyRule("IF (HEALTH IS FULL) AND (ATTACKINGPLAYERS IS NONE) THEN ACTION IS DONOTHING"));
           myrules.Add(new FuzzyRule("IF (HEALTH IS FULL) AND (ATTACKINGPLAYERS IS BATTALION) THEN ACTION IS ENRAGE"));
           myrules.Add(new FuzzyRule("IF (HEALTH IS FULL) AND (ATTACKINGPLAYERS IS GUILD) THEN ACTION IS ATTACK"));
-
         }
 
         public void setFuzzyEngine()
@@ -101,10 +100,7 @@ namespace AliacFuzzyLogic
         private void button1_Click(object sender, EventArgs e)
         {
             myHp.InputValue=(Convert.ToDouble(textBox1.Text));
-            myHp.Fuzzify("LOW");
-            
-            
-            
+            myHp.Fuzzify("LOW");  
         }
         private void button2_Click(object sender, EventArgs e)
         {
