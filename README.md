@@ -3,10 +3,11 @@ The fuzzy logic that I illustrated is a game boss monster's decision making, giv
 
 
 Linguistic Variables:
+
 ![image](https://user-images.githubusercontent.com/111875528/207600520-8bb48a57-c3f0-4b69-af94-e28aab1c5507.png)
 
 
-Rules
+Rules:
 ![image](https://user-images.githubusercontent.com/111875528/207600881-94290104-6e3d-4b86-ba4c-5d808e16f378.png)
 
 
