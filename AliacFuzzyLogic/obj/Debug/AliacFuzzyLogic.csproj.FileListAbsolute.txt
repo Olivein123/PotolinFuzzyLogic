@@ -1,0 +1,24 @@
+F:\DIT2 ASSISGNMENTS\Aliac Fuzzy Logic\AliacFuzzyLogic\AliacFuzzyLogic\bin\Debug\AliacFuzzyLogic.exe
+F:\DIT2 ASSISGNMENTS\Aliac Fuzzy Logic\AliacFuzzyLogic\AliacFuzzyLogic\bin\Debug\AliacFuzzyLogic.pdb
+F:\DIT2 ASSISGNMENTS\Aliac Fuzzy Logic\AliacFuzzyLogic\AliacFuzzyLogic\obj\Debug\ResolveAssemblyReference.cache
+F:\DIT2 ASSISGNMENTS\Aliac Fuzzy Logic\AliacFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Form1.resources
+F:\DIT2 ASSISGNMENTS\Aliac Fuzzy Logic\AliacFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Properties.Resources.resources
+F:\DIT2 ASSISGNMENTS\Aliac Fuzzy Logic\AliacFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csproj.GenerateResource.Cache
+F:\DIT2 ASSISGNMENTS\Aliac Fuzzy Logic\AliacFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.exe
+F:\DIT2 ASSISGNMENTS\Aliac Fuzzy Logic\AliacFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.pdb
+C:\Users\Chris Jordan Aliac\Desktop\DISSERTATION\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.exe
+C:\Users\Chris Jordan Aliac\Desktop\DISSERTATION\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.pdb
+C:\Users\Chris Jordan Aliac\Desktop\DISSERTATION\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\bin\Debug\AliacFuzzyLogic.exe
+C:\Users\Chris Jordan Aliac\Desktop\DISSERTATION\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\bin\Debug\AliacFuzzyLogic.pdb
+C:\Users\Chris Jordan Aliac\Desktop\DISSERTATION\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csprojResolveAssemblyReference.cache
+C:\Users\Chris Jordan Aliac\Desktop\DISSERTATION\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Form1.resources
+C:\Users\Chris Jordan Aliac\Desktop\DISSERTATION\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Properties.Resources.resources
+C:\Users\Chris Jordan Aliac\Desktop\DISSERTATION\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csproj.GenerateResource.Cache
+C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.exe
+C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.pdb
+C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\bin\Debug\AliacFuzzyLogic.exe
+C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\bin\Debug\AliacFuzzyLogic.pdb
+C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csprojResolveAssemblyReference.cache
+C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Form1.resources
+C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Properties.Resources.resources
+C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csproj.GenerateResource.Cache
