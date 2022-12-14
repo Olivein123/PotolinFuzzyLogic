@@ -22,3 +22,12 @@ C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic
 C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Form1.resources
 C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Properties.Resources.resources
 C:\Users\Chris Aliac\Desktop\School Data\AI\SAMPLE AI PROGRAMS\Aliac Fuzzy Logic\AliacFuzzyLogic Cruise Control\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csproj.GenerateResource.Cache
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\bin\Debug\AliacFuzzyLogic.exe
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\bin\Debug\AliacFuzzyLogic.pdb
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csproj.AssemblyReference.cache
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Form1.resources
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.Properties.Resources.resources
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csproj.GenerateResource.cache
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.csproj.CoreCompileInputs.cache
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.exe
+G:\School\Aliac\PotolinFuzzyLogic\AliacFuzzyLogic\obj\Debug\AliacFuzzyLogic.pdb
